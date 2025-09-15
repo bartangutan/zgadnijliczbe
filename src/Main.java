@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -22,7 +24,16 @@ public class Main {
         char znak = 'a';
 
 
+//        napisz program w którym zgadniesz liczbe wylosowaną z zakresu od 1-100
+        //losowanie liczby
+        int wylosowanaLiczba = (int)(Math.random()*100+1); //rzutowanie typów
+        System.out.println("wylosowano: "+wylosowanaLiczba);
 
+        //wpisywanie z klawiatury
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbę: ");
+        int wpisanaLiczba = scanner.nextInt();
+        System.out.println("Wpisano: "+wpisanaLiczba);
 
     }
 }
