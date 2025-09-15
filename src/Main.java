@@ -52,6 +52,33 @@ public class Main {
         roznica = wpisanaLiczba>wylosowanaLiczba?wpisanaLiczba-wylosowanaLiczba:wylosowanaLiczba-wpisanaLiczba;
         System.out.println("różnica: "+roznica);
 
+        //dzielenie całkowite
+        roznica = roznica/10; //dzielimy inty więc nie wyjdzie float
+
+        //instrukcja wyboru
+        switch (roznica){
+            case 0:
+                System.out.println("Prawie lub trafione.");
+                break;
+            case 1:
+                System.out.println("BLisko");
+                break;
+            case 2:
+                System.out.println("Nie najgorzej");
+                break;
+            default:
+                System.out.println("Spróbuj innym razem.");
+        }
+
+        //wyrażenie switch
+        System.out.println(
+                switch (roznica){
+                    case 0->"prawie.";
+                    case 1->"blisko.";
+                    case 2->"srednio.";
+                    default -> "slabo.";
+                }
+        );
 
     }
 }
