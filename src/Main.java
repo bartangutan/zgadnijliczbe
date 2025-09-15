@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -79,6 +80,24 @@ public class Main {
                     default -> "slabo.";
                 }
         );
+
+        //zgadujemy więcej razy
+        //losowanie 2 sposób
+        Random random = new Random();
+        int wylosowanaWartosc = random.nextInt(1, 101);
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Podaj liczbę: ");
+            wpisanaLiczba = scanner.nextInt();
+            if(wpisanaLiczba==wylosowanaWartosc){
+                System.out.println("BRAWO.");
+                break;
+            }else if(wpisanaLiczba>wylosowanaWartosc){
+                System.out.println("niżej");
+            }else{
+                System.out.println("wyżej");
+            }
+        }
 
     }
 }
